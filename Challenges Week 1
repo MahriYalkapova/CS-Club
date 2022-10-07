@@ -1,0 +1,45 @@
+# Challenge 1, create a program that calculates the length of a missing side in your triangle, give you know the hypotenuse
+from math import sqrt;
+
+print("What is the length of the Hypotenuse of your triangle? ", end = '')
+hypotenuse = int(input())
+
+print("What is the length of another known side? ", end = '')
+side1 = int(input())
+
+side2 = sqrt(hypotenuse ** 2 - side1 ** 2)
+print("The length of your missing side is " + str(side2))
+
+# Challenge 2, create program that retains the ordering of the words, but prints the words in reverse
+# Input: create program that retains the ordering of the words
+# Output: etaerc margorp taht sniater eht gniredro fo eht sdrow 
+
+input = input()
+
+input_list = input.split(" ")
+
+for i in range(len(input_list)):
+    word = input_list[i]
+    print(word[::-1], end = ' ')
+    
+# Challenge 3, create program that finds the coordinate of the vertex of a parabola
+from math import sqrt;
+
+print("In the format of ax^2 + bx + c:")
+
+print("What is a? ", end = '')
+a = int(input())
+
+print("What is b? ", end = '')
+b = int(input())
+
+print("What is c? ", end = '')
+c = int(input())
+
+root1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a)
+root2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a)
+
+x_point = (root1 + root2) / 2
+y_point = a * pow(x_point, 2) + b * x_point + c
+
+print(f"In the equation ({a})x^2 + ({b})x + ({c}), your vertex point is ({x_point}, {y_point})")
